@@ -4,10 +4,10 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import Signin from "./signin";
+import Register from "./Register";
 import reportWebVitals from "./reportWebVitals";
 import store from "./redux/store";
 import { Provider } from "react-redux";
-
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
@@ -15,6 +15,7 @@ ReactDOM.render(
         <Routes>
           <Route exact path="/" element={<App />}></Route>
           <Route exact path="/signin" element={<Signin />}></Route>
+          <Route exact path="/register" element={<Register />}></Route>
         </Routes>
       </Router>
     </Provider>

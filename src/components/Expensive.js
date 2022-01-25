@@ -21,7 +21,7 @@ const Expensive = (props) => {
   useEffect(() => {
     //props.details.map((data) => console.log("aftr Props", data));
     //console.log("fsdf", props.details);
-    // console.log("parent", props);
+    console.log("testing", props.details);
   }, [props]);
 
   const submit = async () => {

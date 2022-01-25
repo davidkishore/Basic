@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { connect } from "react-redux";
-
-import { RegisterUserInfo } from "../redux/actions/Register_actions";
+import { useEffect } from "react";
+import { RegisterUserInfo } from "./redux/actions/Register_actions";
 
 const Register = (props) => {
   const [employeeName, setEmployeeName] = useState("");
@@ -23,8 +23,12 @@ const Register = (props) => {
       role: role,
     };
 
-    props.RegisterUserInfo(data);
+    //props.RegisterUserInfo(data);
   };
+
+  useEffect(() => {
+    console.log("registration", props.details);
+  }, [props]);
 
   return (
     <div>
@@ -84,9 +88,9 @@ const Register = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  console.log(state, "state");
-};
+const mapStateToProps = (state) => ({
+  details: state.registraton,
+});
 
 const mapDispatchToProps = {
   // getUserInfo,
