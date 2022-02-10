@@ -14,14 +14,14 @@ const Signin = (props) => {
   const [warn, sWarn] = useState("");
 
   const submit = (e) => {
-    e.preventDefault();
-    if (val == "1") {
-      phone === props.details.registraton[0].phone
-        ? navigate("/")
-        : sWarn("You have Entered Wrong Password");
-    } else if (val == "0") {
-      sWarn("Please fill all details");
-    }
+    // e.preventDefault();
+    // if (val == "1") {
+    //   phone === props.details.registraton[0].phone
+    //     ? navigate("/")
+    //     : sWarn("You have Entered Wrong Password");
+    // } else if (val == "0") {
+    //   sWarn("Please fill all details");
+    // }
   };
 
   function phon() {
@@ -39,8 +39,8 @@ const Signin = (props) => {
   }
 
   useEffect(() => {
-    console.log("details", props.details.registraton[0].phone);
-    onmousemove = () => sWarn("");
+    // console.log("details", props.details.registraton[0].phone);
+    // onmousemove = () => sWarn("");
   });
   return (
     <div className="reg-div">

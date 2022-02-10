@@ -64,3 +64,32 @@ code {
   background-color: #362988;
   margin: 0 auto 20px;
 }
+.header {
+  background: #231962;
+  max-width: 100%;
+  padding: 2%;
+}
+.footer {
+  background: #231962;
+  max-width: 100%;
+  padding: 2%;
+}
+.button1 {
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.appform {
+  border: 2px solid #231962;
+  padding: 8%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  display: block;
+}
+.form2group {
+  display: block;
+}
+.form2group.form-group.row,
+.form2grouprow.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
