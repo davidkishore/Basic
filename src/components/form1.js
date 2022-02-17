@@ -14,14 +14,14 @@ const Signin = (props) => {
   const [warn, sWarn] = useState("");
 
   const submit = (e) => {
-    // e.preventDefault();
-    // if (val == "1") {
-    //   phone === props.details.registraton[0].phone
-    //     ? navigate("/")
-    //     : sWarn("You have Entered Wrong Password");
-    // } else if (val == "0") {
-    //   sWarn("Please fill all details");
-    // }
+    e.preventDefault();
+    if (val == "1") {
+      phone === props.details.registraton[0].phone
+        ? navigate("/kishore-money-application")
+        : sWarn("You have Entered Wrong Password");
+    } else if (val == "0") {
+      sWarn("PLEASE COMPLETE FORM");
+    }
   };
 
   function phon() {
@@ -33,29 +33,28 @@ const Signin = (props) => {
       pCorr("");
       sVal("1");
     } else {
-      pCorr("Please Correct your Phone Number");
+      pCorr("PLEASE CORRECT YOUR PHONE NUMBER");
       sVal("0");
     }
   }
 
   useEffect(() => {
-    // console.log("details", props.details.registraton[0].phone);
-    // onmousemove = () => sWarn("");
+    onmousedown = () => sWarn("");
   });
   return (
     <div className="reg-div">
       <Form className="reg-form">
-        {warn}
+        <div style={{ color: "#e0c900" }}>{warn}</div>
 
         <Form.Group className="mb-3 reg-inbox" controlId="formBasicEmail">
           <Form.Control
-            type="text"
+            type="number"
             placeholder="Enter Phone"
             onChange={(e) => setPhone(e.target.value)}
             onBlur={phon}
             onClick={(e) => pCorr("")}
           />
-          <div>{pcorr}</div>
+          <div style={{ color: "#e0c900" }}>{pcorr}</div>
         </Form.Group>
 
         <Button

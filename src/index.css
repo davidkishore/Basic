@@ -65,12 +65,12 @@ code {
   margin: 0 auto 20px;
 }
 .header {
-  background: #231962;
+  background: #211a4a;
   max-width: 100%;
   padding: 2%;
 }
 .footer {
-  background: #231962;
+  background: #211a4a;
   max-width: 100%;
   padding: 2%;
 }
@@ -82,7 +82,7 @@ code {
   border: 2px solid #231962;
   padding: 8%;
   margin-top: 10%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
   display: block;
 }
 .form2group {
@@ -92,4 +92,15 @@ code {
 .form2grouprow.row {
   margin-left: 0px;
   margin-right: 0px;
+}
+.cen_txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }

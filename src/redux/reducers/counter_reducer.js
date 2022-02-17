@@ -1,4 +1,8 @@
-import { INCREMENT_BUTTON, DECREMENT_BUTTON,RESET_BUTTON } from "../actions/counter_actions";
+import {
+  INCREMENT_BUTTON,
+  DECREMENT_BUTTON,
+  RESET_BUTTON,
+} from "../actions/counter_actions";
 
 export const counter_reducer = (state = 0, action) => {
   switch (action.type) {
@@ -8,9 +12,8 @@ export const counter_reducer = (state = 0, action) => {
     case DECREMENT_BUTTON:
       return state - 1;
 
-
     case RESET_BUTTON:
-      return state ;
+      return state;
 
     default:
       return state;

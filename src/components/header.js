@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Logo from "./logo4.png";
+import { useNavigate } from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
+  let navigate = useNavigate();
   const myComponentStyle = {
     color: "#fff",
   };
+  // useEffect(() => {
+  //   console.log("from parent ", props.name);
+  // }, [props]);
 
   return (
     <div>
@@ -17,12 +22,18 @@ const Header = () => {
             </Col>
             <Col sm="7" xs="7">
               <Row style={{ marginTop: "4%" }}>
-                <h6>Hi, Welcome to Money Management Application</h6>
+                <h6>
+                  Hello{" "}
+                  <span style={{ textTransform: "uppercase" }}>
+                    {props.name}
+                  </span>
+                  , Welcome to Money Management Application
+                </h6>
               </Row>
             </Col>
             <Col sm="1" xs="1">
               <Row style={{ marginTop: "30%" }}>
-                <button className="button1">
+                <button className="button1" onClick={() => fun()}>
                   <b>LOGOUT</b>
                 </button>
               </Row>
@@ -32,6 +43,8 @@ const Header = () => {
       </Container>
     </div>
   );
+  function fun() {
+    window.location.reload();
+  }
 };
-
 export default Header;

@@ -9,17 +9,19 @@ import reportWebVitals from "./reportWebVitals";
 import store from "./redux/store";
 import { Provider } from "react-redux";
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <Router>
-        <Routes>
-          <Route exact path="/" element={<App />}></Route>
-          <Route exact path="/signin" element={<Signin />}></Route>
-          <Route exact path="/register" element={<Register />}></Route>
-        </Routes>
-      </Router>
-    </Provider>
-  </React.StrictMode>,
+  <Provider store={store}>
+    <Router>
+      <Routes>
+        <Route
+          exact
+          path="/kishore-money-application"
+          element={<App />}
+        ></Route>
+        <Route exact path="/signin" element={<Signin />}></Route>
+        <Route exact path="/" element={<Register />}></Route>
+      </Routes>
+    </Router>
+  </Provider>,
   document.getElementById("root")
 );
 

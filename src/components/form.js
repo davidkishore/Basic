@@ -24,7 +24,7 @@ const Register = (props) => {
       props.RegisterUserInfo(data);
       navigate("/signin");
     } else if (val == "0") {
-      sWarn("Please fill all details");
+      sWarn("PLEASE COMPLETE THE FORM");
     }
   };
 
@@ -37,7 +37,7 @@ const Register = (props) => {
       pCorr("");
       sVal("1");
     } else {
-      pCorr("Please Correct your Phone Number");
+      pCorr("PLEASE CORRECT YOUR PHONE NUMBER");
       sVal("0");
     }
   }
@@ -46,17 +46,17 @@ const Register = (props) => {
       eCorr("");
       sVal("1");
     } else {
-      eCorr("Please Correct your Name");
+      eCorr("PLEASE CORRECT YOUR NAME");
       sVal("0");
     }
   }
   useEffect(() => {
-    onmousemove = () => sWarn("");
+    onmousedown = () => sWarn("");
   });
   return (
     <div className="reg-div">
       <Form className="reg-form">
-        {warn}
+        <div style={{ color: "#e0c900" }}>{warn}</div>
         <Form.Group className="mb-3 reg-inbox">
           <Form.Control
             type="text"
@@ -65,18 +65,18 @@ const Register = (props) => {
             onBlur={empname}
             onClick={(e) => eCorr("")}
           />
-          <div>{ecorr}</div>
+          <div style={{ color: "#e0c900" }}>{ecorr}</div>
         </Form.Group>
 
         <Form.Group className="mb-3 reg-inbox" controlId="formBasicEmail">
           <Form.Control
-            type="text"
+            type="number"
             placeholder="Enter Phone"
             onChange={(e) => setPhone(e.target.value)}
             onBlur={phon}
             onClick={(e) => pCorr("")}
           />
-          <div>{pcorr}</div>
+          <div style={{ color: "#e0c900" }}>{pcorr}</div>
         </Form.Group>
 
         <Button
