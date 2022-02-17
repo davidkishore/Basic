@@ -35,7 +35,9 @@ const App = (props) => {
           <Row>
             <Col xs={6} style={{ padding: "2%" }}>
               <Boxes />
-              <Row>Dear {props.data.registraton[0].name},Please fill this form then you will understand the process.</Row>
+              <Row>Dear <span style={{ textTransform: "capitalize" }}>
+                      {props.data.registraton[0].name}
+                    </span>, Please Fill this Form then you will understand the process.</Row>
               <Row className="appform">
                 <Form2
                   name={props.data.registraton[0].name}
