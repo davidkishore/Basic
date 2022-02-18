@@ -33,7 +33,7 @@ const Signin = (props) => {
         <div>
           <br></br>
           <div class="title_underline"></div>
-          <h1 className="title">
+          <h1 className="title" style={{ marginTop: "-2%" }}>
             <span className="title2-s">
               Hint : Use same number which you have used in your Register
             </span>

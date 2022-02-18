@@ -35,9 +35,14 @@ const App = (props) => {
           <Row>
             <Col xs={6} style={{ padding: "2%" }}>
               <Boxes />
-              <Row style={{marginTop:"2%",marginBottom:"2%"}}>Dear <span style={{ textTransform: "capitalize" }}>
-                       {props.data.registraton[0].name}
-                    </span>, Please complete this form then you will understand the process.</Row>
+              <Row style={{ marginTop: "2%", marginBottom: "2%" }}>
+                Dear &nbsp;
+                <span style={{ textTransform: "capitalize" }}>
+                  {props.data.registraton[0].name}
+                </span>
+                , Please complete this form then you will understand the
+                process.
+              </Row>
               <Row className="appform">
                 <Form2
                   name={props.data.registraton[0].name}
