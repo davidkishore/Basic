@@ -16,14 +16,14 @@ const Register = (props) => {
 
   const submit = (e) => {
     e.preventDefault();
-    if (val == "1") {
+    if (val == "1" && phone.length != 0 && name.length != 0) {
       let data = {
         name: name,
         phone: phone,
       };
       props.RegisterUserInfo(data);
       navigate("/signin");
-    } else if (val == "0") {
+    } else if (val == "0" || phone.length == 0 || name.length == 0) {
       sWarn("PLEASE COMPLETE THE FORM");
     }
   };
