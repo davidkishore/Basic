@@ -27,12 +27,24 @@ const Mini = (props) => {
         </h2>
       </Row>
       <Row>
-        <Col style={{ border: "1px solid #231962" }}>Date/Time</Col>
-        <Col style={{ border: "1px solid #231962" }}>Savings Amount</Col>
-        <Col style={{ border: "1px solid #231962" }}>Expensive Amount</Col>
-        <Col style={{ border: "1px solid #231962" }}>Type</Col>
-        <Col style={{ border: "1px solid #231962" }}>Reason</Col>
-        <Col style={{ border: "1px solid #231962" }}>Delete</Col>
+        <Col style={{ border: "1px solid #231962", textAlign: "center" }}>
+          Date/Time
+        </Col>
+        <Col style={{ border: "1px solid #231962", textAlign: "center" }}>
+          Savings Amount
+        </Col>
+        <Col style={{ border: "1px solid #231962", textAlign: "center" }}>
+          Expensive Amount
+        </Col>
+        <Col style={{ border: "1px solid #231962", textAlign: "center" }}>
+          Type
+        </Col>
+        <Col style={{ border: "1px solid #231962", textAlign: "center" }}>
+          Reason
+        </Col>
+        <Col style={{ border: "1px solid #231962", textAlign: "center" }}>
+          Delete
+        </Col>
       </Row>
 
       {props.data.form.map((res) => (
